@@ -33,7 +33,7 @@ node('maven') {
 
   stage('Build') {
 
-    sh "${mvnCmd} clean install -DskipTests=true -f ${pomFileLocation}"
+    sh "${mvnCmd} clean package -DskipTests=true -f ${pomFileLocation}"
 
   }
 
